@@ -20,6 +20,5 @@ const styles = StyleSheet.create({
     container: {
         flex: .85,
         resizeMode: 'contain',
- 
     },
   });
