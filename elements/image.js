@@ -20,10 +20,6 @@ const styles = StyleSheet.create({
     container: {
         flex: .85,
         resizeMode: 'contain',
-
-        shadowColor: 'black',
-        shadowOffset: { width: 10, height: 0 },
-        shadowOpacity: 0.1
  
     },
   });
