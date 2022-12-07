@@ -18,7 +18,7 @@ export class Shot extends Component{
 
 const styles = StyleSheet.create({
     container: {
-        flex: .85,
+        flex: .96,
         resizeMode: 'contain',
     },
   });

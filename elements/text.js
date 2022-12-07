@@ -25,13 +25,13 @@ export class BodyText extends Component{
                         - Wow
                     </Text>
 
-                    <View style={{height:50}}></View>
+                    <View style={{height:90}}></View>
         
                     <Download/>
                 </View>
 
                 <View style={{flex:10}}>
-                    <View style={{height:50}}></View>
+                    <View style={{height:40}}></View>
                     <Shot/>
                 </View>
 
