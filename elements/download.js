@@ -50,20 +50,20 @@ export class Download extends Component{
     render() {
         return(
             <>
-            <View>
+            <View style={styles.btnView}>
                 <Pressable 
                 onPress={() => Linking.openURL("https://download.dkapps.tk/Downloads/zoom_publish.zip")}
                 style={({ pressed }) => [
                 {
                     backgroundColor: pressed
-                    ? '#73ac9b'
-                    : 'white'
+                    ? '#109447'
+                    : 'black'
                 },
                 styles.button,
                 
                 ]}>
-                    <Text style={{color: '#046949', fontSize: 30}}>
-                        Download (Windows)
+                    <Text style={{color: '#15cb61', fontSize: 30, fontWeight:'bold'}}>
+                    ⭳  Download
                     </Text>
                     
                 </Pressable>
@@ -79,10 +79,15 @@ var styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         paddingVertical: 12,
-        paddingHorizontal: 32,
-        borderRadius: 4,
-        elevation: 3,
-
+        paddingHorizontal: 30,
+        borderRadius: 12,
     },
+    btnView:{
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+       
     
 });
