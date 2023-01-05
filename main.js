@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
-import {StyleSheet, ImageBackground, View, Text, SafeAreaView} from 'react-native';
+import {StyleSheet, ImageBackground, View, Text, SafeAreaView, Linking, Pressable} from 'react-native';
+
 import {Shot} from './elements/image';
 import  {Download}  from './elements/download';
 import  {MainText}  from './elements/text';
-
+import  {Link}  from './elements/link';
+import {Contact} from './elements/contact';
 
 
 export class Main extends Component{
@@ -11,13 +13,13 @@ export class Main extends Component{
     render() {
         return(
             <>    
-            <ImageBackground source={require('../assets/ZS1.jpg')} resizeMode="cover" style={styles.background1}>
+            <ImageBackground source={require('./assets/ZS1.jpg')} resizeMode="cover" style={styles.background1}>
                 <SafeAreaView style={{flex:1}}>
                     <View style={styles.bg1format}>
                         <SafeAreaView style={styles.bg1main}>
                             <View style={styles.videoview}>                           
                                 {/*TODO: Replace Shot with video player */}                          
-                                    <Shot/>                                                   
+                                    <Shot/> 
                             </View>
                             <View style={styles.textview}>
                                 <View style={{flex:1}}/>                          
@@ -30,18 +32,35 @@ export class Main extends Component{
                         <View style={{flex:1}}>
                             <Text style={styles.arrow}>
                             ⇣
-                            </Text>
+                            </Text>                                                  
                         </View>                       
                     </View>                        
                     <View style={{flex:1}}/>
                 </SafeAreaView>                    
             </ImageBackground> 
 
-            <ImageBackground source={require('../assets/ZS2.png')} resizeMode="contain" style={styles.background2}>     
+            <ImageBackground source={require('./assets/ZS2.png')} resizeMode="contain" style={styles.background2}>
+                <View style={{flex:7}}/>
+                <View style={{flex:2}}>
+                    <Text style={styles.arrow}>
+                            ⇣
+                    </Text>
+                    <Text style={{fontSize: 28, fontWeight: "bold", alignSelf: 'center'}}>
+                        Your links will open at their designated times every week!
+                    </Text>                                                  
+                </View>     
             </ImageBackground>
 
-       
-             
+            <ImageBackground source={require('./assets/ZStemp.jpg')} resizeMode="contain" style={styles.background3}>
+                <View style={styles.btnview}>
+                    <Download/>
+                    <View style={{width: 30}}></View>
+                    <Contact/>
+                    <View style={{width: 30}}></View>
+                    <Link/>
+                </View>
+                
+            </ImageBackground>        
             </>
         );
     }
@@ -53,12 +72,15 @@ const styles = StyleSheet.create({
         height: 700,
         justifyContent: "center",
     },
-    background2:{
-        height: 700, 
+    background2: {
+        height: 800, 
         justifyContent: "center",
     },
+    background3: {
+        height: 200,
+    },
     //background 1 styles
-    bg1format:{
+    bg1format: {
         flex:5, 
         flexDirection: 'column', 
         margin: 40,
@@ -67,7 +89,7 @@ const styles = StyleSheet.create({
         flex: 10,
         flexDirection: "row",
     },
-    videoview:{//temp photo view
+    videoview: {//temp photo view
         flex: 1, 
         alignContent: 'center', 
         paddingTop: 50,
@@ -93,5 +115,12 @@ const styles = StyleSheet.create({
         padding: 20,
         margin: 10,
     },
-
+    //background 3 styles
+    btnview: {
+        flex:1, 
+        flexDirection: 'row', 
+        justifyContent: 'center', 
+        alignItems: 'flex-start', 
+        marginVertical: 20,
+    }
   });

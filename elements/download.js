@@ -83,7 +83,7 @@ var styles = StyleSheet.create({
         borderRadius: 12,
     },
     btnView:{
-        flex: 1,
+        
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',

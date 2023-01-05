@@ -1,6 +1,5 @@
 import {StyleSheet, SafeAreaView, View, ScrollView, Text} from 'react-native';
 import  {Main}  from './main';
-import  {BodyText}  from './elements/text';
 
 export default function App() {
   return (
@@ -8,8 +7,7 @@ export default function App() {
       <ScrollView>
         <Main/>       
       </ScrollView>   
-    </SafeAreaView>
-      
+    </SafeAreaView>      
   );
 }
 
