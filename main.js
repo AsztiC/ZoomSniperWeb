@@ -40,12 +40,12 @@ export class Main extends Component{
             </ImageBackground> 
 
             <ImageBackground source={require('./assets/ZS2.png')} resizeMode="contain" style={styles.background2}>
-                <View style={{flex:7}}/>
+                <View style={{flex:6}}/>
                 <View style={{flex:2}}>
                     <Text style={styles.arrow}>
                             ⇣
                     </Text>
-                    <Text style={{fontSize: 28, fontWeight: "bold", alignSelf: 'center'}}>
+                    <Text style={styles.textstyle}>
                         Your links will open at their designated times every week!
                     </Text>                                                  
                 </View>     
@@ -114,6 +114,11 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         padding: 20,
         margin: 10,
+    },
+    textstyle: {
+        fontSize: 28, 
+        fontWeight: "bold", 
+        alignSelf: 'center',
     },
     //background 3 styles
     btnview: {

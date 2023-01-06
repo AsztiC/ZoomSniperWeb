@@ -8,18 +8,18 @@ export class MainText extends Component{
             <>
             <View style={{flex: 1, flexDirection: 'row'}}>
                 <Icon/>
-                <View style={{width: 15}}/>
+                <View style={{width: 25}}/>
                 <Text style={styles.title}>
                     乙ᴏᴏᴍ
                     <Text style={{fontSize: 70}}> ડ</Text>
                     ɴ
-                    <Text style={{fontSize: 50}}>I</Text>
+                    <Text style={{fontSize: 43}}>I</Text>
                     
                     ᴘᴇʀ
                 </Text>
             </View>
             
-            <View style={{flex:4}}/>
+            <View style={{flex:5}}/>
             <View style={styles.listview}>
                 <Text style={styles.list}>
                     - Never miss a meeting
