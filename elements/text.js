@@ -12,7 +12,10 @@ export class MainText extends Component{
                 <Text style={styles.title}>
                     乙ᴏᴏᴍ
                     <Text style={{fontSize: 70}}> ડ</Text>
-                    ɴɪᴘᴇʀ
+                    ɴ
+                    <Text style={{fontSize: 50}}>I</Text>
+                    
+                    ᴘᴇʀ
                 </Text>
             </View>
             
