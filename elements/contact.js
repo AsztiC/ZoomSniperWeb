@@ -105,7 +105,7 @@ export class Contact extends Component {
             
             <View style={styles.modalcontainer}>
 
-                <Text style={{flex: 1, color: '#15cb61', fontSize: 21}}>
+                <Text style={{flex: 1, color: '#15cb61', fontSize: 17, fontWeight: 'bold'}}>
                     Hello! Let us know here if you have any issues using Zoom Sniper. {"\n"}
                     Feel free to leave suggestions, give feedback, or to say hi! {"\n"}
                     We will reply ASAP :) {"\n"}                  
@@ -140,7 +140,7 @@ export class Contact extends Component {
                             styles.donebtn,                
                         ]}>
                         <Text style={styles.donetxt}>
-                            Cancel
+                            CANCEL
                         </Text>
                     </Pressable>
                         
@@ -157,7 +157,7 @@ export class Contact extends Component {
                             styles.donebtn,                
                         ]}>
                         <Text style={styles.donetxt}>
-                            Submit
+                            SUBMIT
                         </Text>
                     </Pressable>
 
@@ -189,7 +189,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#282828',
         borderColor: '#2d2d2d',
         borderRadius: 10,
-        borderWidth: 1,
+        borderWidth: 20,
+        borderStyle: 'dashed',
         height: 'auto',
         width: 'auto',
         maxWidth: 600,

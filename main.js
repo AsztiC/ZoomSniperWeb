@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {StyleSheet, ImageBackground, View, Text, SafeAreaView, Linking, Pressable} from 'react-native';
-
+import {Video} from './elements/video';
 import {Shot} from './elements/image';
 import  {Download}  from './elements/download';
 import  {MainText}  from './elements/text';
@@ -19,7 +19,7 @@ export class Main extends Component{
                         <SafeAreaView style={styles.bg1main}>
                             <View style={styles.videoview}>                           
                                 {/*TODO: Replace Shot with video player */}                          
-                                    <Shot/> 
+                                    <Video/> 
                             </View>
                             <View style={styles.textview}>
                                 <View style={{flex:1}}/>                          
