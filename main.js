@@ -13,7 +13,7 @@ export class Main extends Component{
     render() {
         return(
             <>    
-            <ImageBackground source={require('./assets/ZS1.jpg')} resizeMode="cover" style={styles.background1}>
+            <ImageBackground source={require('./assets/ZS1.png')} resizeMode="cover" style={styles.background1}>
                 <SafeAreaView style={{flex:1}}>
                     <View style={styles.bg1format}>
                         <SafeAreaView style={styles.bg1main}>
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     background2: {
-        height: 800, 
+        height: 750, 
         justifyContent: "center",
     },
     background3: {
