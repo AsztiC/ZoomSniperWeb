@@ -2,12 +2,12 @@ import React, {Component} from 'react'
 import {StyleSheet, Image, View} from 'react-native';
 
 
-export class Shot extends Component{
+export class Icon extends Component{
 
     render() {
         return(
             <>
-            <Image source={require('../assets/tempZS.JPG')} style={styles.container} />  
+            <Image source={require('../assets/ZSIcon.png')} style={styles.container} />  
             </>
         );
     }
@@ -16,7 +16,8 @@ export class Shot extends Component{
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        
+        height: 90,
+        width: 90,      
         resizeMode: 'contain',
     },
   });
