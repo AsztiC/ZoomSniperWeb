@@ -22,7 +22,8 @@
     "react-native-web-webview": "^1.0.2",
     "react-native-webview": "^11.26.0",
     "react-native-youtube-iframe": "^2.2.2",
-    "rn-faded-scrollview": "^1.0.13"
+    "rn-faded-scrollview": "^1.0.13",
+    "serve": "^14.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
