@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {StyleSheet, ImageBackground, View, Text, SafeAreaView, Linking, Pressable} from 'react-native';
+import {StyleSheet, ImageBackground, View, Text, SafeAreaView} from 'react-native';
 import {Video} from './elements/video';
 import {Shot} from './elements/image';
 import  {Download}  from './elements/download';
@@ -16,28 +16,27 @@ export class Main extends Component{
             <ImageBackground source={require('./assets/ZS1.png')} resizeMode="cover" style={styles.background1}>
                 <SafeAreaView style={{flex:1}}>
                     <View style={styles.bg1format}>
-                        <SafeAreaView style={styles.bg1main}>
-                            <View style={styles.videoview}>                           
-                                {/*TODO: Replace Shot with video player */}                          
-                                    <Video/> 
+                        <View style={styles.bg1main}>
+                            <View style={styles.videoview}>                                                   
+                                <Video/> 
                             </View>
                             <View style={styles.textview}>
-                                <View style={{flex:1}}/>                          
+                                <View style={{width:70}}/>                          
                                 <View style={styles.textalign}>                                                                                                                                   
-                                    <MainText/>
-                                    <Download/>                                                                         
+                                    <MainText/>                                                                    
                                 </View>
                             </View>                                                                                                    
-                        </SafeAreaView>
-                        <View style={{flex:1}}>
-                            <Text style={styles.arrow}>
-                            ⇣
-                            </Text>                                                  
-                        </View>                       
+                        </View>
+                        <Text style={styles.arrow}>
+                        ⇣
+                        </Text>                                                                            
                     </View>                        
                     <View style={{flex:1}}/>
                 </SafeAreaView>                    
             </ImageBackground> 
+ 
+
+            
 
             <ImageBackground source={require('./assets/ZS2.png')} resizeMode="contain" style={styles.background2}>
                 <View style={{flex:6}}/>
@@ -51,7 +50,7 @@ export class Main extends Component{
                 </View>     
             </ImageBackground>
 
-            <ImageBackground source={require('./assets/ZStemp.jpg')} resizeMode="contain" style={styles.background3}>
+            
                 <View style={styles.btnview}>
                     <Download/>
                     <View style={{width: 30}}></View>
@@ -60,7 +59,7 @@ export class Main extends Component{
                     <Link/>
                 </View>
                 
-            </ImageBackground>        
+                 
             </>
         );
     }
@@ -69,7 +68,7 @@ export class Main extends Component{
 const styles = StyleSheet.create({
     background1: {
         //TODO: make height proportionate to window height
-        height: 700,
+        height: 800,
         justifyContent: "center",
     },
     background2: {
@@ -82,7 +81,7 @@ const styles = StyleSheet.create({
     //background 1 styles
     bg1format: {
         flex:5, 
-        flexDirection: 'column', 
+        //flexDirection: 'column', 
         margin: 40,
     },
     bg1main: {
@@ -95,13 +94,16 @@ const styles = StyleSheet.create({
         paddingTop: 50,
     },
     textview: {
-        flex: 1, 
+        flex: .9, 
         flexDirection: 'row',
+        marginLeft:'8%'
     },
     textalign: {
-        flex: 6, 
+        flex: 1, 
         alignItems: 'center', 
+        justifyContent: 'center',
         paddingVertical: 50,
+        
     },
     arrow: {
         alignSelf: 'center',

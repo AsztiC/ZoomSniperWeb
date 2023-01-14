@@ -5,9 +5,7 @@ export class Shot extends Component{
 
     render() {
         return(
-            <>
             <Image source={require('../assets/tempZS.JPG')} style={styles.container} />  
-            </>
         );
     }
 }
@@ -15,7 +13,6 @@ export class Shot extends Component{
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        
         resizeMode: 'contain',
     },
   });

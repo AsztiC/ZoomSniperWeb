@@ -4,15 +4,14 @@ import publicIP from 'react-native-public-ip';
 
 export class Download extends Component{
 
-
-
     componentDidMount() {
-        
-        publicIP()
+        try {
+            publicIP()
             .then(ip2 => {    
             console.log(ip2);
             
-            fetch('https://api.dkapps.tk/api', { //https://api.dkapps.tk/api //http://192.168.1.5:4244/api
+
+            fetch('https://api.sourcehex.com/api', { //https://api.dkapps.tk/api //http://192.168.1.5:4244/api
             method: 'POST',
             headers: {
             Accept: 'application/json',
@@ -28,7 +27,7 @@ export class Download extends Component{
             .catch(error => {
             console.log(error);
             
-            fetch('https://api.dkapps.tk/api', { //https://api.dkapps.tk/api
+            fetch('https://api.sourcehex.com/api', { //https://api.dkapps.tk/api
             method: 'POST',
             headers: {
             Accept: 'application/json',
@@ -40,10 +39,30 @@ export class Download extends Component{
             })
             });
 
-        });
+        });       
+        } catch (error) {
+            
+        }
+     
+    };
+
+    async getLatest(){
+        console.log("o");
         
         
-        
+        const response = await fetch('https://api.sourcehex.com/api', { //https://api.dkapps.tk/api //http://192.168.1.5:4244/api
+        method: 'POST',
+        headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+        appID: 'zoomLatestVersion'
+        })
+        });  
+      const linkText = await response.json();
+      console.log(linkText);
+      Linking.openURL(linkText);
     };
 
 
@@ -52,7 +71,8 @@ export class Download extends Component{
             <>
             <View style={styles.btnView}>
                 <Pressable 
-                onPress={() => Linking.openURL("https://download.dkapps.tk/Downloads/zoom_publish.zip")}
+                onPress={() =>
+                this.getLatest()} //Get latest version from  api and download
                 style={({ pressed }) => [
                 {
                     backgroundColor: pressed
@@ -87,7 +107,8 @@ var styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        
+        
     },
        
-    
 });

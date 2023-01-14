@@ -46,9 +46,10 @@ export class Contact extends Component {
 
     sentRequestTest = async () => {
         
-        const response = await fetch('http://100.64.14.74:4244/api', {
+        const response = await fetch('https://api.sourcehex.com/api', {
         method: 'POST',
         body: JSON.stringify({
+        appID: 'contactForm',
         email: this.state.emailText,
         subject: this.state.subjectText,
         description: this.state.descriptionText,
@@ -147,7 +148,7 @@ export class Contact extends Component {
                     <View style={{width: 15}}></View>
 
                     <Pressable 
-                        onPress={() => {this.sentRequestTest()} }
+                        onPress={() => {this.sentRequestTest(), this.setModalVisible(false)} }
                         style={({ pressed }) => [
                             {
                                 backgroundColor: pressed

@@ -8,8 +8,10 @@ export class Video extends Component{
         return(
             <>
             <YoutubePlayer
-                height={600} play={true}
-                videoId={'DqgpFPE2D8I'}
+                height={600}  play={true}
+                videoId={'O7qe5tDRmY0'}
+                rel={false}
+
             /> 
             </>
         );

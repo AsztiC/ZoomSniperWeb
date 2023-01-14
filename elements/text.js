@@ -1,25 +1,20 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import {Icon} from './icon';
+import  {Download}  from './download';
 
 export class MainText extends Component{
     render() {
         return(
-            <>
-            <View style={{flex: 1, flexDirection: 'row'}}>
-                <Icon/>
-                <View style={{width: 25}}/>
+        <View style={styles.pageContainer}>
+            <View style={{flexDirection: 'row'}}>
                 <Text style={styles.title}>
-                    乙ᴏᴏᴍ
-                    <Text style={{fontSize: 70}}> ડ</Text>
-                    ɴ
-                    <Text style={{fontSize: 43}}>I</Text>
-                    
-                    ᴘᴇʀ
+                    Zoom Sniper
                 </Text>
+                <View style={{width: 25}}/>
+                <Icon/>
             </View>
-            
-            <View style={{flex:5}}/>
+            <View style={{flex:2}}/>
             <View style={styles.listview}>
                 <Text style={styles.list}>
                     - Never miss a meeting
@@ -29,26 +24,44 @@ export class MainText extends Component{
                 </Text>
                 <Text style={styles.list}>
                     - Wow
-                </Text>
+                </Text> 
+                <View style={{height:20}}/>
+                <Download/>         
             </View>
-            <View style={{flex:3}}/>  
-            </>
+            
+             
+            
+        </View>   
         );
         
     }
 }
 
 var styles = StyleSheet.create({
+    container: {
+        //flex: 1,
+        width:500,
+        height:500,
+        //resizeMode: 'contain',
+    },
+    pageContainer: {
+        flex: 1,
+        //flexDirection: 'row',
+        //marginLeft: '5%',
+        //marginRight: '5%',
+    },
     title:{
-        fontSize: 60,
-         fontWeight: "bold",
+        fontSize: 58,
+        fontWeight: "bold",
+         //numberOfLines: 1,
          
     },
     listview: {
-        flex: 7, 
+        flex: 15, 
         justifyContent:'space-between',
     },
     list: {
+        marginLeft:'5%',
         fontSize: 28, 
         fontWeight: "bold",
     },
