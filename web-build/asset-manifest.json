@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/static/js/app.1ff20652.chunk.js",
-    "app.js.map": "/static/js/app.1ff20652.chunk.js.map",
+    "app.js": "/static/js/app.e7b25248.chunk.js",
+    "app.js.map": "/static/js/app.e7b25248.chunk.js.map",
     "runtime~app.js": "/static/js/runtime~app.27401809.js",
     "runtime~app.js.map": "/static/js/runtime~app.27401809.js.map",
     "static/js/2.55f79163.chunk.js": "/static/js/2.55f79163.chunk.js",
@@ -13,7 +13,7 @@
     "manifest.json": "/manifest.json",
     "serve.json": "/serve.json",
     "static/js/2.55f79163.chunk.js.LICENSE.txt": "/static/js/2.55f79163.chunk.js.LICENSE.txt",
-    "static/media/ZS1.png": "/static/media/ZS1.45dd6aa4.png",
+    "static/media/ZS1.png": "/static/media/ZS1.2482de17.png",
     "static/media/ZS2.png": "/static/media/ZS2.ae636699.png",
     "static/media/ZSIcon.png": "/static/media/ZSIcon.5007d73d.png",
     "static/media/tempZS.JPG": "/static/media/tempZS.8dfd054b.JPG"
@@ -21,6 +21,6 @@
   "entrypoints": [
     "static/js/runtime~app.27401809.js",
     "static/js/2.55f79163.chunk.js",
-    "static/js/app.1ff20652.chunk.js"
+    "static/js/app.e7b25248.chunk.js"
   ]
 }
